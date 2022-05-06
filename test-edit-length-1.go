@@ -1,4 +1,4 @@
-// 求最小编辑距离递归解法
+// 求最小编辑距离递归解法 参考：https://mp.weixin.qq.com/s/uWzSvWWI-bWAV3UANBtyOw
 package main
 
 import (
