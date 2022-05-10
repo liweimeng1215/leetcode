@@ -11,8 +11,6 @@ func debug(format string, a ...interface{}) {
 }
 
 func partition(a []int, lo, hi int) int {
-	debug("[%v %v], a: %v\n", lo, hi, a[lo:hi+1])
-
 	var i, j = lo, hi
 	v := a[lo]
 	for {
@@ -32,10 +30,8 @@ func partition(a []int, lo, hi int) int {
 			break
 		}
 		a[i], a[j] = a[j], a[i]
-		debug("\t a: %v \n", a[lo:hi+1])
 	}
 	a[lo], a[j] = a[j], a[lo]
-	debug("\t a: %v \n", a[lo:hi+1])
 	return j
 }
 
@@ -53,6 +49,7 @@ func fastSort(a []int) {
 }
 
 func main() {
-	a := []int{1, 5, 4, 3, 7, 9, 1, 4}
+	a := []int{3, 3, 3, 3, 3, 7, 1, 2, 5}
 	fastSort(a)
+	debug("a: %v\n", a)
 }
