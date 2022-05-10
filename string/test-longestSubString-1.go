@@ -1,8 +1,8 @@
 //LC3. 无重复字符的最长子串
 //动态规划的思想
 // 记录前一字符为结尾的无重复字符最长子串 f(n-1)
-// f(n-1) = f(n)+s[i] 					if s[i] not in f(n)
-//			f(n)[j+1:]+s[i] 			if s[i] in f(n), j is index of s[i] in f(n)
+// f(n) = f(n-1)+s[i] 					if s[i] not in f(n)
+//		  f(n-1)[j+1:]+s[i] 			if s[i] in f(n), j is index of s[i] in f(n)
 //
 package main
 
